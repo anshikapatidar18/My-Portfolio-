@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshika Patidar | Web Developer Portfolio</title>
+    <meta name="description" content="Anshika Patidar - Aspiring Web Developer skilled in C, C++, Python, HTML and CSS. Explore my projects, certifications, and skills.">
+    <meta name="keywords" content="Anshika Patidar, Web Developer, Portfolio, HTML CSS Projects">
+    <meta name="author" content="Anshika Patidar">
+
+    <meta property="og:title" content="Anshika Patidar | Web Developer Portfolio">
+    <meta property="og:description" content="Aspiring Web Developer building responsive, user-friendly websites.">
+    <meta property="og:image" content="anshika-profile.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+    <canvas id="tech-canvas"></canvas>
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-logo">&lt;Anshika<span>/</span>&gt;</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="toast" class="toast">Copied to Clipboard!</div>
+
+    <!-- CERTIFICATE MODAL -->
+    <div id="cert-modal" class="cert-modal">
+        <div class="cert-modal-box">
+            <span class="cert-modal-close" onclick="closeCertModal()">&times;</span>
+            <img class="cert-modal-content" id="cert-modal-img" alt="Certificate">
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="home" class="has-media">
+        <div class="section-media">
+            <!-- Replace src="xyz" with your hero video file -->
+            <video src="hero.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <span class="media-tag">// intro.mp4</span>
+
+        <div class="hero">
+            <div class="hero-text">
+                <span class="eyebrow" id="typing-text"></span>
+                <h1>Hi, I'm <span class="accent">Anshika Patidar</span></h1>
+                <p>Aspiring Web Developer who turns ideas into responsive, user-friendly websites — currently sharpening skills in C, C++, Python, HTML and CSS.</p>
+                <div class="btn-group">
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Let's Connect</a>
+                    <a href="#projects" class="btn btn-secondary"><i class="fas fa-code"></i> View Work</a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal from-right">
+                <div class="photo-frame">
+                    <!-- Replace src with your own photo file -->
+                    <img src="anshuu.jpg" alt="Anshika Patidar" onerror="this.src='https://placehold.co/320x380/122b2e/e6a558?text=Anshika'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-head reveal from-up">
+            <span class="head-tag">// about</span>
+            <h2>About Me</h2>
+        </div>
+        <div class="glass-card about-wrap reveal from-up">
+            <span class="quote-mark">"</span>
+            <p>I'm a 2nd-year B.Tech IT student who enjoys turning logic into clean, working websites. I learn fast, build often, and I'm always chasing the next skill worth having.</p>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <div class="section-head reveal from-up">
+            <span class="head-tag">// education</span>
+            <h2>Education</h2>
+        </div>
+        <div class="timeline-grid">
+            <div class="glass-card edu-card reveal from-left">
+                <div class="badge">Pursuing</div>
+                <h3>B.Tech (Information Technology) — 2nd Year</h3>
+                <p class="inst">Indore Institute of Science & Technology (IIST)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="has-media">
+        <div class="section-media">
+            <!-- Replace src="xyz" with your skills demo video file -->
+            <video src="skills.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <span class="media-tag">// skills-in-action.mp4</span>
+
+        <div class="section-head reveal from-up">
+            <span class="head-tag">// skills</span>
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-layout">
+            <div class="tag-grid reveal from-left">
+                <span class="skill-tag icon-btn" onclick="showToast('C — learning core logic')"><span class="bracket">&lt;</span>C<span class="bracket">/&gt;</span></span>
+                <span class="skill-tag icon-btn" onclick="showToast('C++ — OOP & DSA basics')"><span class="bracket">&lt;</span>C++<span class="bracket">/&gt;</span></span>
+                <span class="skill-tag icon-btn" onclick="showToast('Python — scripting & logic')"><span class="bracket">&lt;</span>Python<span class="bracket">/&gt;</span></span>
+                <span class="skill-tag icon-btn" onclick="showToast('HTML — structure & markup')"><span class="bracket">&lt;</span>HTML<span class="bracket">/&gt;</span></span>
+                <span class="skill-tag icon-btn" onclick="showToast('CSS — styling & responsive layout')"><span class="bracket">&lt;</span>CSS<span class="bracket">/&gt;</span></span>
+            </div>
+            <div class="skills-sub">// soft skills</div>
+            <div class="tag-grid reveal from-left">
+                <span class="skill-tag icon-btn" onclick="showToast('Adobe Photoshop')"><span class="bracket">&lt;</span>Photoshop<span class="bracket">/&gt;</span></span>
+                <span class="skill-tag icon-btn" onclick="showToast('Communication Skills')"><span class="bracket">&lt;</span>Communication<span class="bracket">/&gt;</span></span>
+                <span class="skill-tag icon-btn" onclick="showToast('Problem Solving')"><span class="bracket">&lt;</span>Problem Solving<span class="bracket">/&gt;</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+        <div class="section-head reveal from-up">
+            <span class="head-tag">// certificates</span>
+            <h2>Certifications</h2>
+        </div>
+        <div class="cert-grid">
+            <div class="glass-card cert-card reveal from-up">
+                <div class="project-icon-wrapper icon-btn" onclick="openCertModal('ai-horizon.jpg')"><i class="fas fa-certificate"></i></div>
+                <h3>AI Horizon</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Enhanced AI knowledge and practical technology skills</p>
+                <button type="button" class="cert-view-btn" onclick="openCertModal('ai-horizon.jpg')">
+                    <i class="fas fa-eye"></i> View Certificate
+                </button>
+            </div>
+            <div class="glass-card cert-card reveal from-up">
+                <div class="project-icon-wrapper icon-btn" onclick="openCertModal('virtual-lab.jpg')"><i class="fas fa-certificate"></i></div>
+                <h3>Virtual Lab Seminar</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Workshop on Virtual Lab</p>
+                <button type="button" class="cert-view-btn" onclick="openCertModal('virtual-lab.jpg')">
+                    <i class="fas fa-eye"></i> View Certificate
+                </button>
+            </div>
+            <div class="glass-card cert-card reveal from-up">
+                <div class="project-icon-wrapper icon-btn" onclick="openCertModal('internal-hackathon.jpg')"><i class="fas fa-certificate"></i></div>
+                <h3>Internal Hackathon</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Indore Institute of Science & Technology (IIST)</p>
+                <button type="button" class="cert-view-btn" onclick="openCertModal('internal-hackathon.jpg')">
+                    <i class="fas fa-eye"></i> View Certificate
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-head reveal from-up">
+            <span class="head-tag">// projects</span>
+            <h2>Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="glass-card project-card reveal from-left">
+                <div class="project-icon-wrapper icon-btn" onclick="showToast('Calculator — logic-driven, smooth UI')"><i class="fas fa-calculator"></i></div>
+                <h3>Calculator</h3>
+                <p>A clean logic-driven calculator with a smooth interface.</p>
+            </div>
+            <div class="glass-card project-card reveal from-right">
+                <div class="project-icon-wrapper icon-btn" onclick="showToast('To-Do List — organize your day')"><i class="fas fa-list-check"></i></div>
+                <h3>To-Do List</h3>
+                <p>A simple task manager for organizing everyday to-dos.</p>
+            </div>
+            <div class="glass-card project-card reveal from-left">
+                <div class="project-icon-wrapper icon-btn" onclick="showToast('Portfolio Website — this one!')"><i class="fas fa-globe"></i></div>
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio built to showcase skills and projects.</p>
+            </div>
+            <div class="glass-card project-card reveal from-right">
+                <div class="project-icon-wrapper icon-btn" onclick="showToast('Guess the Number — randomized logic game')"><i class="fas fa-dice"></i></div>
+                <h3>Guess the Number Game</h3>
+                <p>An interactive logic game with randomized number checks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="has-media">
+        <div class="section-media">
+            <!-- Replace src="xyz" with your contact intro video file -->
+            <video src="contact.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <span class="media-tag">// say-hi.mp4</span>
+
+        <div class="section-head reveal from-up">
+            <span class="head-tag">// contact</span>
+            <h2>Get In Touch</h2>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info reveal from-left">
+                <div class="status-pulse">
+                    <span class="pulse-dot"></span> Open For Internships
+                </div>
+                <h3 class="cyber-h3">Let's Connect!</h3>
+                <p style="color: var(--text-muted); margin-bottom: 16px;">Click to copy details or use the form to send a direct message.</p>
+
+                <div class="contact-info-item" onclick="copyText('anshikapatidar.18@gmail.com', 'Email')">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">EMAIL ADDRESS</div>
+                        <div style="font-weight: 700;">anshikapatidar.18@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-info-item" onclick="copyText('8718092379', 'Phone Number')">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">PHONE NUMBER</div>
+                        <div style="font-weight: 700;">+91 8718092379</div>
+                    </div>
+                </div>
+
+                <div class="contact-info-item" onclick="copyText('Thakur Colony, Rangwasa, Rau, Madhya Pradesh, India', 'Address')">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">LOCATION</div>
+                        <div style="font-weight: 700;">Rau, Madhya Pradesh, India</div>
+                    </div>
+                </div>
+
+                <div class="social-grid-mini">
+                    <a href="https://www.linkedin.com/in/anshika-patidar-a8787140b" target="_blank" class="social-icon-btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/_anshika_patidar18" target="_blank" class="social-icon-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/anshikapatidar" target="_blank" class="social-icon-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://t.me/anshikapatidar" target="_blank" class="social-icon-btn"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://x.com/anshikapatidar" target="_blank" class="social-icon-btn"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="glass-card message-card reveal from-right">
+                <h3><i class="fas fa-paper-plane"></i> Send Direct Message</h3>
+                <form id="contact-form" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" name="from_name" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="reply_to" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="quote-strip">"Stay focused, keep learning, and never stop coding."</div>
+
+    <footer>
+        <p>&copy; 2026 Anshika Patidar — Built line by line.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
