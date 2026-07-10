@@ -187,7 +187,7 @@ document.querySelectorAll('.icon-btn').forEach(el => {
 // NOTE: replace with your own EmailJS public key, service ID and template ID
 // from https://www.emailjs.com before this form will actually send messages.
 (function () {
-    emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+    emailjs.init("VxThDGOFaXH2_grCt");
 })();
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {
@@ -199,7 +199,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     btnLabel.innerText = "Sending...";
     btn.disabled = true;
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    emailjs.sendForm('service_v7q9yrq', 'template_sc822ro', this)
         .then(function () {
             btnLabel.innerText = "Message Sent!";
             document.getElementById('contact-form').reset();
